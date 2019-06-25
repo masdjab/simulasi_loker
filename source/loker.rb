@@ -143,6 +143,8 @@ EOS
       puts "Jumlah loker harus integer."
     elsif jumlah <= 0
       puts "Jumlah loker harus lebih besar dari nol."
+    elsif !@loker.nil? && (prompt("Loker sudah diinisialisasi dengan #{@loker.slots.count} slot. Inisialisasi ulang? (y/n) ").downcase != "y")
+      puts "Inisialisasi loker dibatalkan."
     else
       @loker = Loker.new(jumlah)
       puts "Loker berhasil dibuat, jumlah slot: #{jumlah}"
