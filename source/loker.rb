@@ -268,7 +268,7 @@ EOS
   end
   def start
     puts "== APLIKASI SIMULASI LOKER =="
-    puts "By Heryudi Praja, 190635"
+    puts "By Heryudi Praja, 190626"
     puts "E-mail: mr_orche@yahoo.com"
     puts "Phone : 082211407298"
     puts "github: github.com/masdjab"
