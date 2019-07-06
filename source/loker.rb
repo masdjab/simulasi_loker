@@ -18,6 +18,7 @@ class Slot
   end
 end
 
+
 class Loker
   attr_reader :slots
   
@@ -35,7 +36,7 @@ class Loker
     # return array of slot numbers
     
     if !options.is_a?(Hash)
-      riase "#{self.class}.where? parameter must be a Hash."
+      raise "#{self.class}.where? parameter must be a Hash."
     elsif options.empty?
       raise "#{self.class}.where? parameters cannnot be empty."
     elsif !(io = (options.keys - [:jenis_id, :nomor_id])).empty?
@@ -58,6 +59,7 @@ class Loker
     end
   end
 end
+
 
 class App
   def initialize
@@ -261,7 +263,7 @@ EOS
       when "search"
         h_search args
       else
-        puts "Perintah tidak dikenal: '#{args.first}'."
+        puts "Perintah tidak dikenal: '#{cmd}'."
         puts "Ketik 'help' atau 'info' untuk informasi perintah yang tersedia."
       end
     end
